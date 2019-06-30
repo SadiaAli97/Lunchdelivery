@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>User Registration Form</title>
+<link rel="stylesheet" href="style1.css" type="text/css">
+<script>
+function submitfunc()
+{
+ 	var fn = document.getElementById("firstname");
+ 	var ln = document.getElementById("lastname");
+ 	var alpha_exp = /^[A-Za-z]$/;
+ 	if(!fn.value.match(alpha_exp))
+ 		{
+ 		alert("Invalid first name format\n please enter name in proper format");
+        return false;
+ 		}
+ 	else if(ln.value.match("[A-Za-z]"))
+ 		{
+ 		alert("Invalid last name format\n please enter the name in proper format");
+        return false;
+ 		}
+}
+
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+	<h1>USER REGISTRATION FORM</h1><br>
+	<br>
+	<table cellspacing="20" align="center" frame="box">
+	<tr>
+	</tr>
+	<tr>
+		<td>
+		<span class="s1">First Name<span class="s">*</span>: </span>
+		</td>
+		</tr>
+		<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="s1" id="firstname" pattern="[A-Za-z]" placeholder="Enter first name" required ></td>
+	</tr>
+	<!-- <tr><td></td><td></td></tr>
+	<tr><td></td><td></td></tr>
+	<tr><td></td><td></td></tr>
+	<tr><td></td><td></td></tr>
+	<tr><td></td><td></td></tr> -->
+	<tr>
+		<td>
+		<span class="s1">Last Name: </span>
+		</td>
+		</tr>
+		<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="s1" id="lastname" pattern="[A-Za-z]"  placeholder="Enter last name" required ></td>
+	</tr>
+	<!-- <tr><td></td><td></td></tr>
+	<tr><td></td><td></td></tr>
+	<tr><td></td><td></td></tr>
+	<tr><td></td><td></td></tr>
+	<tr><td></td><td></td></tr> -->
+		<tr>
+		<td>
+		<span class="s1">Gender<span class="s">*</span>: </span>
+		</td>
+		</tr>
+		<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" class="s1" name="g" checked><span class="s1">Male</span></td>
+		</tr>
+		<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" class="s1" name="g" ><span class="s1">Female</span></td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" class="s1" name="g" ><span class="s1">Others</span></td>
+		</tr>
+	<tr>
+		<td>
+		<span class="s1">DOB<span class="s">*</span>: </span>
+		</td>
+		</tr>
+		<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" class="s1"  placeholder="Enter date of birth" required ></td>
+	</tr>
+	<tr>
+		<td>
+		<span class="s1">Contact Number<span class="s">*</span>: </span>
+		</td>
+		</tr>
+		<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="tel" class="s1"  placeholder="Enter contact number" required ></td>
+	</tr>
+	<tr>
+		<td>
+		<span class="s1">Email id: </span>
+		</td>
+		</tr>
+		<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="Email" class="s1" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"  placeholder="Enter email id" required ></td>
+	</tr>
+	<tr>
+		<td>
+		<span class="s1">Address<span class="s">*</span>: </span>
+		</td>
+		</tr>
+		<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea rows="8" cols="50" placeholder="Enter the residential address"></textarea></td>
+	</tr>
+	<tr><td><input type="submit" value="Submit" onclick="submitfunc()"/></td>
+	<td><input type="reset" value="Reset" onclick="resetfunc()"/></td></tr>
+	</table>
+
+</body>
+</html>

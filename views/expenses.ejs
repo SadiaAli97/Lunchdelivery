@@ -1,0 +1,72 @@
+<?php include("server.php");?>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+
+form
+{
+  text-align:center;
+  border:  solid;
+  padding: 50px;
+  margin: 20px;
+  background-color:coral;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+h2
+{
+	text-align:center;
+	color:White;
+	
+}
+body
+{
+	background-image:url("image.jpg");
+	background-repeat:no-repeat;
+	background-size:1000px;
+	
+}
+
+</style>
+
+
+	<title>Expense</title>
+
+  </head>
+  <body class="exp">
+  
+
+    <div class="header">
+      <h2 style="color:white"> Expense Details</h2>
+    </div>
+
+    <form method="post" action="/expenses">
+  
+      <div class="input-group">
+        <label>Amount :</label>
+        <input type="number" name="e_amount" required>
+      </div>
+      <div class="input-group">
+        <label>Date :</label>
+        <input type="date" name="e_date" required>
+      </div>
+      <div class="input-group">
+        <label>Type :</label>
+        <input type="text" name="e_type" required>
+      </div>
+
+      <div class="input-group">
+        <label>Description :</label>
+        <input type="text" name="e_desc" required>
+      </div>
+
+     <div class="input-group">
+        <button type="submit" class="btn" name="bk_btn" value="Add Name">Submit</button>
+      </div>
+
+    </form>
+
+  </body>
+</html>

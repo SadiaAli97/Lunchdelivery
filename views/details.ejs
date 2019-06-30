@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <style>
+*
+{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+
+}
+
+h2
+{
+		text-align:"center";
+		color:"white";
+	
+}
+body
+{
+	background-image:url("image.jpg");
+	background-repeat:no-repeat;
+	background-size:1000px;
+	
+}
+
+table 
+{
+	background-color:"white";
+	color:white;
+}
+</style>    
+    
+
+
+	<title>Account</title>
+
+  </head>
+  <body>
+    
+
+
+<div class="header">
+  <h2 style="color:white;"> Account Details</h2>
+
+
+      </div>
+
+   <div>
+       
+        <table class = "gfg" border="5px">
+           <tr>
+               <th>Amount</th>
+               <th>Bank Name</th>
+               <th>Type</th>
+               <th>IFSC</th>
+               <th>Branch Name</th>
+           </tr>
+            <% acc.forEach(function(acc){ %>
+           <tr>
+               <td class = "geeks"><%= acc.ac_num %></td>
+               <td><%=  acc.bank_name %></td>
+               <td><%= acc.ac_type %></td>
+               <td><%= acc.ifsc %></td>
+               <td><%= acc.br_name %></td>
+           </tr>
+       
+        
+       <% }) %>
+       </table>
+   
+  
+
+</div>
+
+
+<div class="header">
+      <h2 style="color:white;"> Expense Details</h2>
+    
+</div>
+
+   <div>
+      
+       
+       <table class = "gfg" border="5px">
+           <tr>
+               <th>Amount</th>
+               <th>Date</th>
+               <th>Type</th>
+               <th>Description</th>
+           </tr>
+            <% exp.forEach(function(exp){ %>
+           <tr>
+               <td class = "geeks"><%= exp.e_amount %></td>
+               <td><%=  exp.e_date %></td>
+               <td><%= exp.e_type %></td>
+               <td><%= exp.e_desc %></td>
+           </tr>
+       
+        
+       <% }) %>
+       </table>
+
+ </div>
+ 
+ <div class="header">
+      <h2 style="color:white;"> Savings Details</h2>
+    </div>
+
+   <div>
+       
+       <table class = "gfg" border="5px">
+           <tr>
+               <th>Amount</th>
+               <th>Date</th>
+               <th>Type</th>
+               
+           </tr>
+            <% svg.forEach(function(svg){ %>
+           <tr>
+               <td class = "geeks"><%= svg.s_amount %></td>
+               <td><%= svg.s_date %></td>
+               <td><%= svg.s_type%></td>
+            
+           </tr>
+       
+        
+       <% }) %>
+       </table>
+       
+         </div>
+         
+          <div class="header">
+      <h2 style="color:white;"> Income Details</h2>
+    </div>
+
+    <div>
+        
+          <table class = "gfg" border="5px">
+           <tr>
+               <th>Amount</th>
+               <th>Date</th>
+               <th>Source</th>
+               
+           </tr>
+            <% icm.forEach(function(icm){ %>
+           <tr>
+               <td class = "geeks"><%= icm.amount %></td>
+               <td><%= icm.date %></td>
+               <td><%= icm.sources %></td>
+            
+           </tr>
+       
+        
+       <% }) %>
+       </table>
+        
+</div>
+  </body>
+</html>

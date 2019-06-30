@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src=”/socket.io/socket.io.js”></script>
+  <style type="text/css">
+  body{
+      color:white;
+  }
+      
+  </style>
+<script type="text/javascript">
+function demo1(){
+    alert("Response submitted")
+}
+    
+</script>
+  <style type="text/css">
+ 
+    
+.not-yet{
+    font-family: cursive;
+    text-decoration: none;
+  background-color: blue;
+  color: white;
+  border:0px;
+  border-radius: 10px;
+  }
+table {
+    border-collapse: separate; /* IE7 and lower */
+   border: 0px;
+    
+}
+
+th{
+    background-color: rgb(139, 70, 70);
+}
+tr:nth-child(odd) {
+    
+    background-color:rgb(117, 48, 43);
+}
+
+tr:nth-child(even) {
+    
+    background-color:rgb(70, 25, 22);
+}
+
+ 
+
+th, td { 
+    width:150px; 
+    text-align:center; 
+    border:1px solid black; 
+    padding:5px 
+  
+} 
+.geeks { 
+    border-right:hidden; 
+} 
+.gfg { 
+    border-collapse:separate; 
+    border-spacing:0 15px; 
+} 
+  </style>
+</head>
+<body>
+<div class=”container”>
+ <br>
+ <div class=”jumbotron”>
+ <h1> Requests</h1>
+ <br>
+
+ 
+ <div id=”messages”>
+     <form method="post" action="/responses">
+     <table class = "gfg" border="5px">
+           <tr>
+               <th>From</th>
+                <th>Message</th>
+                <th>Response</th>
+           </tr>
+            <% msg.forEach(function(msg){ %>
+           <tr>
+               <td class = "geeks"><input type="text" value="<%= msg.name %>" name="name" /></td>
+               <td><%= msg.message %></td>
+               <td>
+              <input type="text" name="a" />
+               </td>
+               <td><button class = "not-yet" type="submit" onclick="demo1()">Send Response</button></td>
+               
+           </tr>
+       <% }) %>
+       </table>
+       
+</form>
+</div>
+
+</body>
+</html>

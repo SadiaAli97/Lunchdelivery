@@ -1,0 +1,70 @@
+<?php include("server.php");?>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Savings</title>
+    <style type="text/css">
+
+
+form
+{
+  text-align:center;
+  border:  solid;
+  padding: 50px;
+  margin: 20px;
+  background-color:coral;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+h2
+{
+	text-align:center;
+	color:White;
+	
+}
+body
+{
+	background-image:url("image.jpg");
+	background-repeat:no-repeat;
+	background-size:1000px;
+	
+}
+
+
+    </style>
+  </head>
+  <body class="save">
+    
+
+    <div class="header">
+      <h2 style="color:white"> Savings Details</h2>
+    </div>
+
+    <form method="post" action="/saving">
+      <?php include('errors.php'); ?>
+
+      <div class="input-group">
+        <label>Amount :</label>
+        <input type="number" name="s_amount" required>
+      </div>
+
+      <div class="input-group">
+        <label>Date :</label>
+        <input type="date" name="s_date" required>
+      </div>
+
+      <div class="input-group">
+        <label>Type</label>
+        <input type="text" name="s_type" required>
+      </div>
+
+      <div class="input-group">
+        <button type="submit" class="btn" name="sa_btn">Submit</button>
+      </div>
+
+    </form>
+
+  </body>
+</html>

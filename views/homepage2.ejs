@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-size: 5px;
+  height:52.7px;
+
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: rgb(209, 30, 30);
+}
+li.right{
+  float: right;
+  font-size: 35px;
+    margin: 10px; 
+}
+
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 180px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 2; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 0px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 25px;
+  color:black;
+  display: block;
+  text-align: center;
+}
+.sidenav .single{
+  padding: 6px 6px 6px 6px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #fff9f9;
+  display: block;
+  text-align: bottom;
+}
+
+iframe{
+    top: 20px;
+    height:700px;
+    width:1000px;
+
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+body{
+  background: url(img1233.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px;
+}
+.block {
+    height:auto;
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding:0px 20px;
+  float: left;
+  position:absolute;
+  left:90px;
+  top:100px;
+  
+  width: 70%;
+  
+  background: url(img11234.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-left: 200px; /*give space at right*/
+}
+.icon{
+
+  color: rgb(255, 255, 255);
+  
+  text-align: center;
+  padding: 10px;
+  text-transform: none;
+
+}
+.demo{
+  font-size:40px;
+  padding:20px;
+}
+
+  </style>
+  <script type="text/javascript">
+      function displayme(a){
+          var addr=document.getElementById("block");
+          if(a=="grp"){
+              
+              addr.innerHTML='<iframe src="/groups" > </iframe>'
+              
+          }
+          else if(a=='rqst'){
+              addr.innerHTML='<iframe src="/requests" > </iframe>'
+          }
+          
+          
+      }
+  </script>
+</head>
+<body>
+  <ul>
+ 
+
+  <li class="right"><a href="#news"><i class="fa fa-user-circle"></i></a></li>
+
+  <li class="right"><a href="#contact"><i class="fa fa-shopping-cart"></i></a></li>
+
+</ul>
+<div class="sidenav">
+  <label class = "single" style="color:black;"><b>Money Manager</b></label>
+  <br/><br/><br/><br/><br/>
+  <a id="group" class = "icon" onclick="displayme('grp')">Group</a><br/>
+  <a id="requests" class = "icon" onclick="displayme('rqst')">Requests</a><br/>
+  <a class = "icon" href="#">Profile</a><br/>
+  <a class = "icon" href="/logout">Logout</a><br/>
+  
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<div class="block" id="block">
+ 
+</div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Registration system</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript">
+
+   //check email
+function ValidateEmail(inputText)
+{
+  
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+var em=document.getElementById(inputText);
+
+if(em.value.match(mailformat))
+{
+em.focus();
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+em.focus();
+return false;
+}
+}
+//password check
+function chkpas()
+{
+    var init=document.getElementById("password");
+    var sec=document.getElementById("password_1");
+    if(init.value=="")
+    {
+        alert("you did not enter a password\n"+"please enter the password");
+        init.focus();
+        return false;
+    }
+    if(init.value!=sec.value)
+    {
+        alert("the two password entered are not the same\n"+"please enter the password now");
+
+    init.focus();
+    oinity.select();
+    return false;
+}
+else
+return true;
+
+}
+
+      
+  </script>
+</head>
+
+<body class="reg">
+
+
+
+  <section id="navbar">
+   <div class="container-navbar">
+        <a class="navbar-name" href="#">Money Manager</a>
+    </div>
+  </section>
+
+  <div class = "container-reg">
+  <div class="header">
+  	<h2>Register</h2>
+  </div>
+
+  <form method="post" action="/register">
+  	<?php include('errors.php'); ?>
+    
+  	<div class="input-group">
+  	  <label>Username</label>
+  	  <input type="text" name="username" value="">
+  	</div>
+
+  	<div class="input-group">
+  	  <label>Email</label>
+  	  <input id="email" onchange="ValidateEmail('email')" type="email" name="email" value="">
+  	</div>
+
+  	<div class="input-group">
+  	  <label>Password</label>
+  	  <input type="password" name="password">
+  	</div>
+
+  	<div class="input-group">
+  	  <label>Confirm password</label>
+  	  <input onchange="chkpas()" type="password" name="password_1">
+  	</div>
+  	<div class="input-group">
+  	  <label>Admin</label>
+  	  <input type="radio" class="s1" name="g" value="Admin" ><span class="s1">Admin</span>
+  	  
+  	</div>
+  	
+  	<div class="input-group">
+  	  <label>Group</label>
+  	  <input type="group" name="group">
+  	</div>
+
+  	<div class="input-group">
+  	  <button type="submit" class="btn" name="reg_user">Register</button>
+  	</div>
+
+  	<p class="not-yet">
+  		Already a member? <a href="login">Sign in</a>
+  	</p>
+
+  </form>
+</div>
+</body>
+</html>

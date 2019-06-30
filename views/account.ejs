@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>
+<head>
+<style>
+
+form
+{
+  text-align:center;
+  border:  solid;
+  padding: 50px;
+  margin: 20px;
+  background-color:coral;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+h2
+{
+	text-align:center;
+	color:White;
+	
+}
+body
+{
+	background-image:url("image.jpg");
+	background-repeat:no-repeat;
+	background-size:1000px;
+	
+}
+
+</style>
+</head><body>
+  <div>
+  
+
+
+
+<div>
+  <h2 style="color:white"> Account Details</h2>
+</div>
+
+    <form method="post" action="http:///account" target="_blank" onsubmit="try {return window.confirm(&quot;This form may not function properly due to certain security constraints.\nContinue?&quot;);} catch (e) {return false;}">
+      
+      <div>
+        <label>Account Number :</label>
+        <input type="number" name="ac_num"><br/><br/><br/>
+      </div>
+      <div>
+        <label>Bank Name :</label>
+        <input type="text" name="bank_name"><br/><br/><br/>
+      </div>
+      <div>
+        <label>Account Type</label>
+        <input type="text" name="ac_type"><br/><br/><br/>
+      </div>
+      <div>
+        <label>IFSC code</label>
+        <input type="text" name="ifsc"><br/><br/><br/>
+      </div>
+      <div>
+        <label>Branch Name</label>
+        <input type="text" name="br_name"><br/><br/><br/>
+      </div>
+
+      <div>
+        <button type="submit" name="bk_btn" value="Add Name">Submit</button>
+      </div>
+
+    </form>
+
+  </div>
+
+</body></html>
+

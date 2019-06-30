@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style2.css">
+<style>
+
+form
+{
+  text-align:center;
+  border:  solid;
+  padding: 50px;
+  margin: 20px;
+  background-color:coral;
+	
+}
+
+h1
+{
+	text-align:center;
+	color:White;
+}
+body
+{
+	background-image:url("image.jpg");
+	background-repeat:no-repeat;
+	background-size:1000px;
+}
+table{
+    position:absolute;
+    left:250px;
+}
+
+</style>
+</head>
+<body>
+<div class=”container”>
+ <br>
+ <div class=”jumbotron”>
+ <h1> Send Message </h1>
+ <br>
+
+<form method="post" action="/messages">
+
+      <div class="input-group">
+        <input type="text" name="name"  placeholder="name" required><br/><br/><br/>
+      </div>
+      <div class="input-group">
+        <textarea name="message" required placeholder="Your text here"></textarea><br/><br/><br/>
+      </div>
+      
+      <div class="input-group">
+        <button type="submit" class="btn" name="bk_btn" value="Add Name">Send</button>
+      </div>
+
+    </form>
+
+<hr/>
+</div>
+</div>
+ <hr/>
+ 
+
+<hr/>
+
+
+
+
+
+ </div>
+ <hr/>
+ <div id=”messages”>
+     
+     <table class="gfg" border="5px">
+           <tr>
+               <th>To</th>
+                <th>Message</th>
+                <th>Response</th>
+           </tr>
+            <% msg.forEach(function(msg){ %>
+           <tr>
+               <td class="geeks"><%= msg.name %></td>
+               <td><%= msg.message %></td>
+               <td><%= msg.response %></td>
+               <td><a href="/delmsg">&times
+               </a></td>
+           </tr>
+       <% }) %>
+       </table>
+
+</div>
+
+</body>
+</html>

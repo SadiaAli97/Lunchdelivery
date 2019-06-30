@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: url('black.jpg');
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-size: 5px;
+  height:52.7px;
+
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: rgb(209, 30, 30);
+}
+li.right{
+  float: right;
+  font-size: 35px;
+    margin: 10px; 
+}
+
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 180px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 2; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-image: url('black.jpg');
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 0px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 25px;
+  color:black;
+  display: block;
+  text-align: center;
+}
+.sidenav .single{
+  padding: 6px 6px 6px 6px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #fff9f9;
+  display: block;
+  text-align: bottom;
+}
+
+iframe{
+    top: 20px;
+    height:700px;
+    width:1000px;
+
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+body{
+  background-image:url("img12.jpg");
+}
+
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px;
+}
+.block {
+    height:auto;
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding:0px 20px;
+  float: left;
+  position:absolute;
+  left:90px;
+  top:100px;
+  
+  width: 70%;
+  background-image:url("img123.jpg") ;
+  margin-left: 200px; /*give space at right*/
+}
+.icon{
+
+  color: rgb(255, 255, 255);
+  
+  text-align: center;
+  padding: 10px;
+  text-transform: none;
+
+}
+.demo{
+  font-size:40px;
+  padding:20px;
+}
+
+  </style>
+  <script type="text/javascript">
+      function displayme(a){
+          var addr=document.getElementById("block");
+          if(a=="acc"){
+              
+              addr.innerHTML='<iframe src="/account" > </iframe>'
+              
+          }
+          else if(a=='svg'){
+              addr.innerHTML='<iframe src="/saving" > </iframe>'
+          }
+          else if(a=='exp'){
+              addr.innerHTML='<iframe src="/expenses" > </iframe>'
+          }
+          else if(a=='icm'){
+              addr.innerHTML='<iframe src="/income" > </iframe>'
+          }
+          else if(a=='dets'){
+              addr.innerHTML='<iframe src="/details" > </iframe>'
+          }
+          else if(a=='reqs'){
+              addr.innerHTML='<iframe src="/userreq" > </iframe>'
+          }
+           else if(a=='chrt'){
+              addr.innerHTML='<iframe src="/chart" > </iframe>'
+          }
+          
+      }
+  </script>
+</head>
+<body>
+  <ul>
+ 
+
+  <li class="right"><a href="#news"><i class="fa fa-user-circle"></i></a></li>
+
+  <li class="right"><a href="#contact"><i class="fa fa-shopping-cart"></i></a></li>
+
+</ul>
+<div class="sidenav">
+  <label class="demo"><b>Money Manager</b></label>
+  <br/><br/><br/><br/>
+  <a id="account" class = "icon" onclick="displayme('acc')">Account</a><br/>
+  <a id="savings" class = "icon" onclick="displayme('svg')">Savings</a><br/>
+  <a id="expenses" class = "icon" onclick="displayme('exp')">Expenses</a><br/>
+  <a id="income" class = "icon" onclick="displayme('icm')">Income</a><br/>
+  <a id="details" class = "icon" onclick="displayme('dets')">Details</a><br/>
+  <a id="requests" class = "icon" onclick="displayme('reqs')">Request</a><br/>
+  <a id="chart" class = "icon" onclick="displayme('chrt')">Chart</a><br/>
+  <a class = "icon" href="#">Profile</a><br/>
+  <a class = "icon" href="/logout">Logout</a><br/>
+  
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<div class="block" id="block">
+ 
+</div>
+</body>
+</html>

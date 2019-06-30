@@ -1,0 +1,25 @@
+@charset "ISO-8859-1";
+
+h1 {
+	text-align: center;
+	font-family: "Times New Roman"
+}
+
+.s1 {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.s{
+	color:red;
+}
+
+body
+{
+	background-image:url("backgroundimage.jpg");
+	background-repeat:no-repeat;
+	background-size:1400px 1050px;	
+}
+
+table
+{
+	background-color:#ff3333;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style2.css">
+
+	<title>Account</title>
+ <style type="text/css">
+  body{
+      color:white;
+  }
+      
+  </style>
+  </head>
+  <body>
+    
+
+
+<div class="header">
+  <h2> Account Details</h2>
+
+
+      </div>
+
+   <div>
+       
+        <table class = "gfg" border="5px">
+           <tr>
+               <th class = "geeks">User ID</th>
+               <th>Member Name</th>
+               <th>Member Email</th>
+               <th>Group Name</th>
+           </tr>
+            <% usr.forEach(function(usr){ %>
+           <tr>
+               <td class = "geeks"><%= usr._id %></td>
+               <td><%= usr.username %></td>
+               <td><%= usr.email %></td>
+               <td><%= usr.group %></td>
+               
+           </tr>
+       
+        
+       <% }) %>
+       </table>
+   
+  
+
+</div>
+
+
+
+        
+
+  </body>
+</html>

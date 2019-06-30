@@ -1,0 +1,154 @@
+#navbar{
+    margin: 0px;
+    padding: 0px;
+    background-color: #f72552;
+    margin : auto;
+    overflow:none;
+    padding-left: 10px;
+    width : 100%;
+    height: 50px;
+  
+  }
+  #navbar .navbar-name{
+    font-size: 30px;
+    text-decoration: none;
+    color: #331616;
+    font-weight: 800;
+    text-align: left;
+    font-family: cursive;
+  }
+  
+  
+  #navbar .logout{
+     font-size: 15px;
+     font-weight: 600;
+     background-color: #f4ad29;
+     color: #331616;
+     border: 1px #f4ad29 solid;
+     padding: 1px;
+     padding-top: 3px;
+     text-decoration: none;
+     float: right;/* to make the button come to right*/
+     height: 50px;
+     width: 100px;
+     font-family: cursive;
+  }
+  
+  #navbar .user{
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #c2f44b;
+    color: #331616;
+    border: 1px #c2f44b solid;
+    padding: 1px;
+    padding-top: 3px;
+    text-decoration: none;
+    float: right;/* to make the button come to right*/
+    height: 50px;
+    width: 100px;
+    font-family: cursive;
+  }
+ 
+  
+  
+  
+   
+  
+   .input-group label{
+     padding : 10px;
+     padding-left: 0px;
+       display: block;
+     font-family: cursive;
+  
+   }
+   .input-group input{
+       padding: 7px;
+       width: 70%;
+   }
+  
+   .input-group button{
+     margin : 10px;
+     margin-left: 0px;
+     margin-top: 15px;
+     padding: 5px;
+     padding-top: 5px;
+     color : white;
+     background-color: #0743bc;
+     font-weight: 600;
+     border: 1px #0743bc solid;
+     border-radius: 5px;
+     font-family: cursive;
+   }
+  
+  /* this style part is f
+  
+ 
+  
+  
+
+  
+  
+  /* this style part is for lgion page*/
+  .login{
+    background-image: url("color.jpeg");
+     margin: 0px auto;
+     background-repeat: no-repeat;
+     overflow: hidden;
+     background-size: cover;
+     right: 0;
+     left: 0;
+  
+  
+  }
+   .login form{
+     /*border: 2px black solid;
+     border-radius: 15px;*/
+     padding : 20px;
+     width : 300px;
+     height: 200px;
+     margin: 0px auto; /* to bring the object to the centre*/
+     padding-left: 100px;
+     
+  
+  
+   }
+  
+  
+  
+  
+  .not-yet{
+    font-family: cursive;
+    text-decoration: none;
+  
+  }
+  
+  
+  .header{
+    font-size: 25px;
+    color: #331616;
+    text-align: center;
+    font-family: cursive;
+  }
+  
+  /*registor pagwe css*/
+  
+  .reg form{
+    /*border: 2px black solid;
+    border-radius: 15px;*/
+    padding : 20px;
+    width : 300px;
+    height: 400px;
+    margin: 0px auto; /* to bring the object to the centre*/
+    padding-left: 100px;
+    
+  }
+  
+  .reg {
+     background-image: url("color.jpeg");
+     margin: 0px auto;
+     background-repeat: no-repeat;
+  
+  
+  }
+  
+  
